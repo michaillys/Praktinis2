@@ -28,7 +28,7 @@ namespace Praktinis2
         }
         private void TestConnection_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = "Server=localhost;Database=mic;User Id=mic;Password=mic;";
+            string connectionString = DBConnection.GetConnectionString();
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
@@ -46,8 +46,7 @@ namespace Praktinis2
 
         private void GetTableNames_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = "Server=localhost;Database=mic;User Id=mic;Password=mic;";
-
+            string connectionString = DBConnection.GetConnectionString();
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try

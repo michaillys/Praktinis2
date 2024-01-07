@@ -1,0 +1,38 @@
+﻿<Page x:Class="Praktinis2.ManagerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Praktinis2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ManagerPage">
+
+    <Grid Background="white">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="ManagerPage" Grid.Row="0" HorizontalAlignment="Center" Margin="5"/>
+        <!-- Display Manager Data -->
+        <TextBlock Text="Manager ID:" Grid.Row="1" HorizontalAlignment="Left" Margin="5"/>
+        <TextBlock Text="{Binding ManagerID}" Grid.Row="1" HorizontalAlignment="Right" Margin="5"/>
+
+        <TextBlock Text="First Name:" Grid.Row="2" HorizontalAlignment="Left" Margin="5"/>
+        <TextBlock Text="{Binding FirstName}" Grid.Row="2" HorizontalAlignment="Right" Margin="5"/>
+
+        <TextBlock Text="Last Name:" Grid.Row="3" HorizontalAlignment="Left" Margin="5"/>
+        <TextBlock Text="{Binding LastName}" Grid.Row="3" HorizontalAlignment="Right" Margin="5"/>
+
+        <TextBlock Text="Role ID:" Grid.Row="4" HorizontalAlignment="Left" Margin="5"/>
+        <TextBlock Text="{Binding RoleID}" Grid.Row="4" HorizontalAlignment="Right" Margin="5"/>
+
+        <TextBlock Text="Login:" Grid.Row="5" HorizontalAlignment="Left" Margin="5"/>
+        <TextBlock Text="{Binding Login}" Grid.Row="5" HorizontalAlignment="Right" Margin="5"/>
+    </Grid>
+</Page>
