@@ -12,6 +12,7 @@
         <Frame Name="mainFrame" NavigationUIVisibility="Hidden"/>
         <StackPanel>
             <Button Content="Test Page" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Center" Click="TestPage_Click"/>
+            <Button Content="Login Page" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Center" Click="LoginPage_Click"/>
         </StackPanel>
     </Grid>
 </Page>

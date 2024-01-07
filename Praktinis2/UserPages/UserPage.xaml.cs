@@ -14,24 +14,17 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Praktinis2
-{ 
-    public partial class MainPage : Page
+{
+    /// <summary>
+    /// Interaction logic for UserPage.xaml
+    /// </summary>
+    public partial class UserPage : Page
     {
-        public MainPage()
+        public UserPage(person person)
         {
             InitializeComponent();
-        }
 
-        private void TestPage_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("TestPage.xaml", UriKind.Relative));
+            DataContext = person;
         }
-
-        private void LoginPage_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Uri("Login.xaml", UriKind.Relative));
-        }
-
-        
     }
 }

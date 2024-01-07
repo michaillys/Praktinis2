@@ -16,18 +16,14 @@ using MySql.Data.MySqlClient;
 
 namespace Praktinis2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class  MainWindow: Window
-    {
+    {       
         public MainWindow()
         {
             InitializeComponent();
             mainFrame.NavigationService.Navigate(new MainPage());
-        }
-
-        
-    
+            
+        }           
     }
 }
