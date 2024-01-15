@@ -16,6 +16,15 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <Label Content="ManagerPage" Grid.Row="0" HorizontalAlignment="Center" Margin="5"/>
@@ -34,5 +43,38 @@
 
         <TextBlock Text="Login:" Grid.Row="5" HorizontalAlignment="Left" Margin="5"/>
         <TextBlock Text="{Binding Login}" Grid.Row="5" HorizontalAlignment="Right" Margin="5"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="5">
+            <Button Content="NewService" HorizontalAlignment="Left" Margin="5" Click="NewService_Click"/>
+            <Button Content="GroupServices" HorizontalAlignment="Left" Margin="5" Click="GroupServices_Click"/>
+            <Button Content="ViewRequests" HorizontalAlignment="Left" Margin="5" Click="ViewRequests_Click"/>
+        </StackPanel>
+
+        <ListView Name="RequestsList" Margin="10" Grid.Row="7" Visibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Request ID" DisplayMemberBinding="{Binding RequestID}"/>
+                    <GridViewColumn Header="Client ID" DisplayMemberBinding="{Binding PersonID}" />                    
+                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" />
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Description}" />
+                    <GridViewColumn Header="Message" DisplayMemberBinding="{Binding Status}" />                    
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView Name="ServicesList" Margin="10" Grid.Row="7" Visibility="Hidden">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Service ID" DisplayMemberBinding="{Binding ServiceID}"/>
+                    <GridViewColumn Header="Service Name" DisplayMemberBinding="{Binding ServiceName}" />
+                    <GridViewColumn Header="Service Rate" DisplayMemberBinding="{Binding ServiceRate}" />
+                    <GridViewColumn Header="Provider ID" DisplayMemberBinding="{Binding ProviderID}" />
+                    <GridViewColumn Header="Date" DisplayMemberBinding="{Binding Date}" />
+                    <GridViewColumn Header="Group Bill ID" DisplayMemberBinding="{Binding GroupBillID}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
     </Grid>
 </Page>
